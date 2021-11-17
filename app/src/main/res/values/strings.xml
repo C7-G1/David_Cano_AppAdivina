@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">David_Cano_AppAdivina</string>
+    <string name="textoInicio">He Pensado un número entre 1 y 100.¿Adivina cúal es?</string>
+    <string name="textoMayor">¿%1$d?  ¡ Uy! El número que he pensado es mayor</string>
+    <string name="textoMenor">¿%1$d?  ¡ Uy! El número que he pensado es menor</string>
+    <string name="textoIgual">¡¡Has acertado!!</string>
+    <string name="textoCaja">¡Inténtalo!</string>
+    <string name="textoBoton">Probar</string>
+    <plurals name="intentos">
+        <item quantity="one">%d intento</item>
+        <item quantity="other">%d intentos</item>
+    </plurals>
+</resources>
