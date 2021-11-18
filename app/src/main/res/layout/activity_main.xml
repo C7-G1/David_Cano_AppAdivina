@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/imagen"
+
 
     tools:context=".MainActivity">
 
@@ -27,27 +27,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/textoCaja"
-        app:layout_constraintBottom_toBottomOf="@+id/textoBoton"
+        app:layout_constraintBottom_toBottomOf="@+id/tbNum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textoBoton"
+        app:layout_constraintTop_toTopOf="@+id/tbNum"
         app:layout_constraintVertical_bias="0.615" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btPrueba"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="112dp"
         android:onClick="probar"
         android:text="Prueba!!"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textoBoton"
+        app:layout_constraintEnd_toEndOf="@+id/tbNum"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textoBoton" />
+        app:layout_constraintStart_toStartOf="@+id/tbNum" />
 
     <EditText
-        android:id="@+id/textoBoton"
+        android:id="@+id/tbNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -60,7 +60,7 @@
         app:layout_constraintVertical_bias="0.597" />
 
     <TextView
-        android:id="@+id/textIntento"
+        android:id="@+id/tvIntento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -68,7 +68,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.586"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/btPrueba"
         app:layout_constraintVertical_bias="0.407"
         tools:ignore="MissingConstraints" />
 
@@ -80,7 +80,7 @@
         android:layout_marginBottom="108dp"
         android:text="Volver a jugar?"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/textoBoton"
+        app:layout_constraintBottom_toTopOf="@+id/tbNum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toStartOf="parent"

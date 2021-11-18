@@ -19,8 +19,9 @@ public class dialogo extends DialogFragment {
         alertaDialogo.setMessage("Otra partida");
         alertaDialogo.setMessage(("Adivina mi número"));
         alertaDialogo.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener(){
-            @Override
+
             public void onClick(DialogInterface dialog, int id){
+                new MainActivity().mostrarMensaje(getActivity());
                 accionesDialogo.onDialoguePositiveClick(dialogo.this);
 
             }

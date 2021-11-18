@@ -6,6 +6,7 @@
     <string name="textoIgual">¡¡Has acertado!!</string>
     <string name="textoCaja">¡Inténtalo!</string>
     <string name="textoBoton">Probar</string>
+    <string name="otra">Otra?</string>
     <plurals name="intentos">
         <item quantity="one">%d intento</item>
         <item quantity="other">%d intentos</item>
