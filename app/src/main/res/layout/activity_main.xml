@@ -74,7 +74,7 @@
 
     <Button
         android:id="@+id/btReintentar"
-        android:onClick="volverJugar"
+        android:onClick="jugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="108dp"

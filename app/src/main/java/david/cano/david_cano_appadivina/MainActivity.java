@@ -1,7 +1,9 @@
     package david.cano.david_cano_appadivina;
     
     import androidx.appcompat.app.AppCompatActivity;
+    import androidx.fragment.app.DialogFragment;
 
+    import android.app.Dialog;
     import android.content.Context;
     import android.os.Bundle;
     import android.view.View;
@@ -11,7 +13,7 @@
 
     import java.util.Random;
     
-    public class MainActivity extends AppCompatActivity {
+    public class MainActivity extends AppCompatActivity implements AccionesDialogo {
         EditText et = null;
         TextView tInicio = null;
         int numeroAdivinar = 0;
@@ -66,17 +68,34 @@
             tInicio.setText(mensajeFinal);
             actualizarIntentos();
         }
-    
-        public void volverJugar(View v2) {
+
+        public void volverJugar(){
             numeroAdivinar();
             View bJugarDeNuevo = findViewById(R.id.btReintentar);
             bJugarDeNuevo.setVisibility(View.INVISIBLE);
             numIntentos=0;
-            numeroAdivinar();
             View v = findViewById(R.id.tbNum);
             v.setVisibility(View.VISIBLE);
 
-            v2= findViewById(R.id.btPrueba);
+
+
+            TextView tv;
+            tv = (TextView) findViewById(R.id.textView);
+            tv.setText(R.string.textoInicio);
+            tv = (TextView) findViewById(R.id.tvIntento);
+            tv.setText("");
+
+        }
+    
+        public void jugar(View v2) {
+            numeroAdivinar();
+            View bJugarDeNuevo = findViewById(R.id.btReintentar);
+            bJugarDeNuevo.setVisibility(View.INVISIBLE);
+            numIntentos=0;
+            View v = findViewById(R.id.tbNum);
+            v.setVisibility(View.VISIBLE);
+
+            v2= findViewById(R.id.btReintentar);
             v2.setVisibility(View.VISIBLE);
 
             TextView tv;
@@ -114,9 +133,22 @@
 
         }
         public void mostrarDialogo(View v){
-             Dialogo d=new Dialogo();
+            dialogo d=new dialogo();
+            d.show(getSupportFragmentManager(),"tagDialogo");
         }
+
         public void mostrarMensaje(Context contexto){
             Toast toast= Toast.makeText(contexto, R.string.otra, Toast.LENGTH_LONG);
+            toast.show();
         }
+
+        public void onDialogPositiveClick(DialogFragment dialog){
+            volverJugar();
+        }
+
+        public void onDialogNegativeClick(DialogFragment dialog){
+            finalPartida();
+
+        }
+
     }
