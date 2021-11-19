@@ -18,22 +18,26 @@ public class dialogo extends DialogFragment {
         AlertDialog.Builder alertaDialogo= new AlertDialog.Builder(getActivity());
         alertaDialogo.setMessage("Otra partida");
         alertaDialogo.setMessage(("Adivina mi número"));
-        alertaDialogo.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener(){
 
-            public void onClick(DialogInterface dialog, int id){
-                new MainActivity().mostrarMensaje(getActivity());
-                accionesDialogo.onDialoguePositiveClick(dialogo.this);
-
-            }
-        });
-        alertaDialogo.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener(){
+        alertaDialogo.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int id){
-                accionesDialogo.onDialogueNegativeClick(dialogo.this);
+            public void onClick(DialogInterface dialogInterface, int i) {
+                accionesDialogo.onDialogPositiveClick(dialogo.this);
             }
         });
+
+        alertaDialogo.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                accionesDialogo.onDialogNegativeClick(dialogo.this);
+            }
+        });
+
         return alertaDialogo.create();
     }
+
+
     @Override
     public void onAttach(Context contexto){
         super.onAttach(contexto);
